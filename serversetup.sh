@@ -8,10 +8,8 @@ apt-get -y install libfdk-aac-dev
 
 apt-get -y install ffmpeg
 
-ffmpeg -v
+ffmpeg -version
 
 apt-get -y install linux-generic
 
-modprobe snd-aloop pcm_substreams=1
-
-echo 'pcm.!default { type plug slave.pcm 'hw:Loopback,0,0" }' >> ~/.asoundrc
+echo 'pcm.!default { type plug slave.pcm "hw:Loopback,0,0" }' >> ~/.asoundrc
