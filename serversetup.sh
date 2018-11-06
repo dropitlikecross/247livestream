@@ -15,3 +15,5 @@ ffmpeg -version
 apt-get -y install linux-generic
 
 echo 'pcm.!default { type plug slave.pcm "hw:Loopback,0,0" }' >> ~/.asoundrc
+
+ldconfig
