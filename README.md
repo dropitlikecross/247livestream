@@ -37,5 +37,23 @@ create the crediantials file
 sudo nano storagelogin.credentials
 
 
-# Create a Playlist
-find `pwd` -name "*.mp3" > /home/stream2/playlist.txt
+# MPC
+
+sudo usermod -a -G stream2 mpd
+sudo usermod -a -G audio mpd
+
+sudo nano /etc/mpd.conf
+
+Change the music directory
+
+Use "mpc ls | mpc add" to add all files to the playlist.
+
+
+mpc ls | mpc add
+
+mpc repeat on | mpc shuffle | mpc play
+
+More on MPC:
+http://manpages.ubuntu.com/manpages/trusty/man1/mpc.1.html
+
+
