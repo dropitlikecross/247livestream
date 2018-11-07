@@ -50,6 +50,8 @@ sudo nano /etc/mpd.conf
 
 Change the music directory
 
+mpc update
+
 Use "mpc ls | mpc add" to add all files to the playlist.
 
 
