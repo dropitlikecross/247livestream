@@ -1,6 +1,9 @@
 # 247livestream
 24/7 Live Stream Project
 
+This is a project to run a 24/7 live stream.
+
+There is no GUI and everything is running using CLI in order to save on resources. The idea is to have multiple servers with different genres running off 1 central storage source. There is also 1 server set up to automatically update the music library.
 
 These instructions are for me as a personal reference. Feel free to use it as a guide to figure out your own stream.
 
