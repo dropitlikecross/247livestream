@@ -58,5 +58,5 @@ More on MPC:
 http://manpages.ubuntu.com/manpages/trusty/man1/mpc.1.html
 
 
-Note:
+**Note:**
 Run the stream first then run the audio as there is an ALSA clash otherwise.
