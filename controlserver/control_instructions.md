@@ -1,3 +1,8 @@
+# Youtube DL
+sudo curl -L https://yt-dl.org/downloads/latest/youtube-dl -o /usr/local/bin/youtube-dl
+sudo chmod a+rx /usr/local/bin/youtube-dl
+
+
 # Add a network share
 sudo nano /etc/fstab
 
@@ -6,5 +11,10 @@ sudo nano /etc/fstab
 create the crediantials file
 sudo nano storagelogin.credentials
 
-# Set up crontab -e
+# Set up Cron Scripts
+
+Place the sh scripts inside /etc/cron.daily
+crontab -e is a bit overkill and I decided I didn't need it
+
+
 
