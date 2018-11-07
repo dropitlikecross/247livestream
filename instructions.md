@@ -61,7 +61,7 @@ http://manpages.ubuntu.com/manpages/trusty/man1/mpc.1.html
 **Note:**
 Run the stream first then run the audio as there is an ALSA clash otherwise.
 
-#FFMPEG
+# FFMPEG
 
 As I had a lot of issues with the version from apt-get we are going to build our own
 
