@@ -60,3 +60,13 @@ http://manpages.ubuntu.com/manpages/trusty/man1/mpc.1.html
 
 **Note:**
 Run the stream first then run the audio as there is an ALSA clash otherwise.
+
+#FFMPEG
+
+As I had a lot of issues with the version from apt-get we are going to build our own
+
+git clone https://git.ffmpeg.org/ffmpeg.git ffmpeg
+
+./configure --enable-shared --enable-gpl --enable-nonfree --enable-pthreads --enable-postproc --enable-libtheora --enable-version3 --enable-libx264 --enable-libfdk-aac --disable-stripping --disable-encoder=libschroedinger --enable-librtmp --enable-openssl --enable-gnutls --enable-avfilter --enable-libfreetype --disable-decoder=amrnb --disable-vda --enable-fontconfig --disable-mips32r2 --disable-mipsdspr2 --disable-htmlpages --disable-podpages --disable-altivec --enable-libass
+
+make
