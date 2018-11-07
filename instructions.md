@@ -70,6 +70,6 @@ As I had a lot of issues with the version from apt-get we are going to build our
 
 git clone https://git.ffmpeg.org/ffmpeg.git ffmpeg
 
-./configure --enable-shared --enable-gpl --enable-nonfree --enable-pthreads --enable-postproc --enable-libtheora --enable-version3 --enable-libx264 --enable-libfdk-aac --disable-stripping --disable-encoder=libschroedinger --enable-librtmp --enable-openssl --enable-gnutls --enable-avfilter --enable-libfreetype --disable-decoder=amrnb --disable-vda --enable-fontconfig --disable-mips32r2 --disable-mipsdspr2 --disable-htmlpages --disable-podpages --disable-altivec --enable-libass
+./configure --enable-shared --enable-gpl --enable-nonfree --enable-pthreads --enable-postproc --enable-libtheora --enable-version3 --enable-libx264 --enable-libfdk-aac --disable-stripping --enable-librtmp --enable-gnutls --enable-avfilter --enable-libfreetype --disable-decoder=amrnb --enable-fontconfig --disable-mips32r2 --disable-mipsdspr2 --disable-htmlpages --disable-podpages --disable-altivec --enable-libass
 
 make
