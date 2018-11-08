@@ -1,5 +1,6 @@
 #!/bin/bash
 
+sudo modprobe snd-aloop pcm_substreams=1
 FFMPEG=ffmpeg
 GIF=/your/animated_gif.gif
 STREAM_KEY=<your stream key goes here>
