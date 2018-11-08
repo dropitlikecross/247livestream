@@ -7,7 +7,7 @@ STREAM_KEY=<your stream key goes here>
 URL=rtmp://a.rtmp.youtube.com/live2/$STREAM_KEY
 FPS=30
 KEYINT=$(expr $FPS \* 3)
-TEXT=/tmp/currentsong.txt
+TEXT=/tmp/current_song.txt
 COLOR="0xFFFFFF"
 BCOLOR="0x000000"
 
