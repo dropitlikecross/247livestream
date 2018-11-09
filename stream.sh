@@ -15,5 +15,5 @@ $FFMPEG -thread_queue_size 512 -f alsa -ac 2 -i hw:Loopback,1,0 -fflags +genpts 
 -vf drawtext="fontfile=/usr/share/fonts/truetype/freefont/FreeSans.ttf:bordercolor=$BCOLOR: borderw=1: fontcolor=$COLOR:textfile=$TEXT:reload=1:y=10:x=5" \
 -vcodec libx264 -x264opts keyint=$KEYINT:min-keyint=$KEYINT:scenecut=-1 -b:v 5000k \
 -preset veryfast -s 1920x1080 \
--c:a libfdk_aac -b:a 160k -ar 44100 \
+-c:a libfdk_aac -b:a 128k -ar 44100 \
 -f flv $URL
