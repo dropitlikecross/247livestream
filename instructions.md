@@ -82,5 +82,6 @@ find `pwd` -name "*.so"
 
 add the absolute path without the .so part to
 sudo nano /etc/ld.so.conf
+
 sudo ldconfig
 
