@@ -9,9 +9,13 @@ Run serversetup.sh to install all requirements.
 # ALSA
 This is the sound system used by linux
 Check that you are on generic:
+
 cat /boot/grub/grub.cfg
+
 If you are, run 
+
 sudo modprobe snd-aloop pcm_substreams=1
+
 to confirm.
 
 In order to do that we need to change linux kernel to generic so modprobe snd-aloop works.
