@@ -11,7 +11,7 @@ QUALITY="veryfast" # one of the many FFMPEG preset
 AUDIO_RATE="44100"
 STREAM_KEY="" # your streaming key goes here
 #to hide logs use= -loglevel quiet
-ffmpeg -f x11grab -s "$INRES" -r "$FPS" -i :0.0 -f alsa -i hw:0 -f flv -ac 2 -ar $AUDIO_RATE -i $GIF \
+ffmpeg -f x11grab -s "$INRES" -r "$FPS" -i $GIF -i :0.0 -f alsa -i hw:Loopback,1,0 -f flv -ac 2 -ar $AUDIO_RATE \
 -vcodec libx264 -keyint_min 3 -b:v $CBR -minrate $CBR -maxrate $CBR -pix_fmt yuv420p \
 -s $OUTRES -preset $QUALITY -acodec aac -threads $THREADS \
 -bufsize $CBR "rtmp://usmedia3.liveedu.tv:1935/liveedutv/$STREAM_KEY"
