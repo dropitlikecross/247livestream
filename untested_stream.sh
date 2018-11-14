@@ -14,4 +14,4 @@ STREAM_KEY="" # your streaming key goes here
 ffmpeg -f x11grab -s "$INRES" -r "$FPS" -i $GIF -i :0.0 -f alsa -i hw:Loopback,1,0 -f flv -ac 2 -ar $AUDIO_RATE \
 -vcodec libx264 -keyint_min 3 -b:v $CBR -minrate $CBR -maxrate $CBR -pix_fmt yuv420p \
 -s $OUTRES -preset $QUALITY -acodec aac -threads $THREADS \
--bufsize $CBR "rtmp://usmedia3.liveedu.tv:1935/liveedutv/$STREAM_KEY"
+-bufsize $CBR "rtmp://a.rtmp.youtube.com/live2/$STREAM_KEY"
