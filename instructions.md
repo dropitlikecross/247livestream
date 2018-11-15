@@ -30,7 +30,12 @@ sudo update-grub
 
 And then reboot now to take this in effect
 
-After reboot you can test it with uname -a which should give you generic and run
+After reboot you can test it with 
+
+uname -a 
+
+which should give you generic and run
+
 sudo modprobe snd-aloop pcm_substreams=1
 
 **Note**
