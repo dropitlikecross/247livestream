@@ -2,7 +2,7 @@
 
 sudo modprobe snd-aloop pcm_substreams=1
 FFMPEG=ffmpeg
-GIF=/mnt/streamstorage/video/gamingstream/narutocity.gif
+GIF=narutocity.gif
 STREAM_KEY=
 TEXT=/tmp/current_song.txt
 COLOR="0xFFFFFF"
