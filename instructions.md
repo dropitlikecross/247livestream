@@ -38,6 +38,15 @@ which should give you generic and run
 
 sudo modprobe snd-aloop pcm_substreams=1
 
+Alternatively you can remove the azure kernels:
+
+ls /lib/modules
+
+sudo apt-get autoremove --purge 4.15.0-1030-azure
+
+etc...
+
+
 **Note**
 Set modprobe snd-aloop pcm_substreams=1 to run on boot
 
