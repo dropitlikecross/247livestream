@@ -1,3 +1,4 @@
+#Script to check if the stream script has terminated and to start it again if it has.
 #!/bin/bash
 
 trap "exit" SIGINT
@@ -5,5 +6,5 @@ trap "exit" SIGINT
 while true :
 do
   /home/stream/stream.sh
-  echo "some crash"
+  echo "Stream has Crashed"
 done
