@@ -1,3 +1,5 @@
+#Installs all the requirements for Ubuntu 18.04
+
 apt-get update
 apt-get -y install screen nano bzip2 mpc mpd htop git
 apt-get -y install autoconf automake build-essential libass-dev libfreetype6-dev libtheora-dev libtool libvorbis-dev pkg-config texinfo zlib1g-dev
