@@ -5,6 +5,6 @@ trap "exit" SIGINT
 
 while true :
 do
-  /home/stream/stream.sh
+  stream.sh
   echo "Stream has Crashed"
 done
