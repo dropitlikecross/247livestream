@@ -21,6 +21,6 @@ crontab -e is a bit overkill and I decided I didn't need it
 
 
 
-# You DL Parameters
+# Youtube DL Parameters
 --download-archive "/home/archive.txt" -o "/home/music/songs/%(title)s.%(ext)s" -f bestaudio --audio-format mp3 "https://www.youtube.com/user/dropitlikecross/videos"- --reject-title "podcast" --reject-title "mix" --geo-bypass --playlist-start 1 --add-metadata -x --metadata-from-title "%(artist)s - %(title)s"
 
