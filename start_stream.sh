@@ -15,5 +15,5 @@ trap "exit" SIGINT
 while true :
 do
   current_song.sh
-  echo "Stream has Crashed"
+  echo "Current Song has Crashed"
 done
