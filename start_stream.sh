@@ -1,19 +1,16 @@
 #Script to check if the stream script has terminated and to start it again if it has.
 #!/bin/bash
 
-trap "exit" SIGINT
+trap "kill 0" SIGINT
 
-while true :
+while :
 do
-  stream.sh
-  echo "Stream has Crashed"
-done
+   ./stream.sh
+   echo "Stream has Crashed"
+done &
 
-
-trap "exit" SIGINT
-
-while true :
+while :
 do
-  current_song.sh
-  echo "Current Song has Crashed"
+   ./current_song.sh
+   echo "Current Song has Crashed"
 done
