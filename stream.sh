@@ -1,6 +1,9 @@
 #!/bin/bash
 
 sudo modprobe snd-aloop pcm_substreams=1
+mpc play
+mpc pause
+
 FFMPEG=ffmpeg
 GIF=
 STREAM_KEY=
@@ -23,5 +26,6 @@ $FFMPEG -thread_queue_size 1024 -f alsa -ac 2 -i hw:Loopback,1,0 -fflags +genpts
 -vcodec libx264 -x264opts keyint=$KEYINT:min-keyint=$KEYINT:scenecut=-1 -b:v $CBR -minrate $CBR -maxrate $CBR -pix_fmt yuv420p \
 -s $OUTRES -preset $QUALITY -acodec aac -threads $THREADS -fflags nobuffer \
 -bufsize $CBR -f flv "rtmp://a.rtmp.youtube.com/live2/$STREAM_KEY" \
+mpc play \
 2> log_stream.txt
 
