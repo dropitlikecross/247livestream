@@ -46,9 +46,9 @@ Alternatively you can remove the azure kernels:
 
     ls /lib/modules
 
-    sudo apt-get autoremove --purge 4.15.0-1030-azure
+    sudo apt-get autoremove --purge 4.15.0-1036-azure
 
-Remove all versions of -azure
+Remove all versions of -azure. You may need to reboot once and remove the updated version.
 
 
 
