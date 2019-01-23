@@ -1,5 +1,6 @@
 
 
+
 # 247livestream
 24/7 Live Stream Project
 
@@ -63,6 +64,9 @@ Add your azure shared storage. I've left a generic name as a guide:
 Create the credentials file and fill it in with your login details. You can place the credetials in fstab if you prefer.
 
     sudo nano storagelogin.credentials
+Mount the network drives:
+
+    sudo mount -a -t cifs
 
 
 
