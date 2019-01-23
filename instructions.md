@@ -1,81 +1,90 @@
 
+
 # 247livestream
 24/7 Live Stream Project
 
 
-Run serversetup.sh to install all requirements.
+Run serversetup.sh to install all requirements and system environments.
+
+    sudo sh serversetup.sh
 
 
 # ALSA
-This is the sound system used by linux
+This is the sound system used by linux. I wasn't able to get it working on the Azure Kernel so we will have to change to the Generic Kernel.
+
 Check that you are on generic:
 
-cat /boot/grub/grub.cfg
+    cat /boot/grub/grub.cfg
 
-If you are, run 
+If you are, confirm by:
 
-sudo modprobe snd-aloop pcm_substreams=1
+    sudo modprobe snd-aloop pcm_substreams=1
 
-to confirm.
 
 In order to do that we need to change linux kernel to generic so modprobe snd-aloop works.
 
-sudo nano /etc/default/grub 
+    sudo nano /etc/default/grub 
 
 and set
 
-GRUB_DEFAULT=“1>2”
+    GRUB_DEFAULT=“1>2”
+then
 
-sudo update-grub
+    sudo update-grub
 
-And then reboot now to take this in effect
+And then reboot now to take this in effect. After rebooting you can test it with 
 
-After reboot you can test it with 
+    uname -a
 
-uname -a 
+ 
 
-which should give you generic and run
+You should see the generic kernel. Then run:
 
-sudo modprobe snd-aloop pcm_substreams=1
+    sudo modprobe snd-aloop pcm_substreams=1
 
 Alternatively you can remove the azure kernels:
 
-ls /lib/modules
+    ls /lib/modules
 
-sudo apt-get autoremove --purge 4.15.0-1030-azure
+    sudo apt-get autoremove --purge 4.15.0-1030-azure
 
-etc...
+Remove all versions of -azure
 
 
-**Note**
-Set modprobe snd-aloop pcm_substreams=1 to run on boot
 
 # Add a network share
-sudo nano /etc/fstab
 
-//.file.core.windows.net/streamingstorage              /mnt/streamstorage            cifs credentials=/home/storagelogin.credentials,noauto,nofail,x-systemd.automount,x-systemd.device-timeout=90 0       0
+    sudo nano /etc/fstab
 
-create the crediantials file
-sudo nano storagelogin.credentials
+Add your azure shared storage. I've left a generic name as a guide:
+
+    //.file.core.windows.net/streamingstorage              /mnt/streamstorage            cifs credentials=/home/storagelogin.credentials,noauto,nofail,x-systemd.automount,x-systemd.device-timeout=90 0       0
+
+Create the credentials file and fill it in with your login details. You can place the credetials in fstab if you prefer.
+
+    sudo nano storagelogin.credentials
+
 
 
 # MPC
+**Installing MPC to play the music.**
 
-sudo usermod -a -G stream2 mpd
-sudo usermod -a -G audio mpd
+    sudo usermod -a -G stream2 mpd
+    sudo usermod -a -G audio mpd
+    
+    sudo nano /etc/mpd.conf
 
-sudo nano /etc/mpd.conf
+Change the music directory to the music directory of your preference. (Azure shared storage)
 
-Change the music directory
-
-mpc update
+    mpc update
 
 Use "mpc ls | mpc add" to add all files to the playlist.
 
+    mpc ls | mpc add
 
-mpc ls | mpc add
+I recommend the following settings for MPC:
 
-mpc repeat on | mpc shuffle | mpc play
+    mpc repeat on | mpc shuffle | mpc play
 
 More on MPC:
 http://manpages.ubuntu.com/manpages/trusty/man1/mpc.1.html
@@ -83,5 +92,4 @@ http://manpages.ubuntu.com/manpages/trusty/man1/mpc.1.html
 
 **Note:**
 Run the stream first then run the audio as there is an ALSA clash otherwise.
-
 
