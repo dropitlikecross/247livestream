@@ -12,6 +12,7 @@ Run serversetup.sh to install all requirements and system environments.
 
 # ALSA
 This is the sound system used by linux. I wasn't able to get it working on the Azure Kernel so we will have to change to the Generic Kernel.
+''Note: This is only applies to Azure hosted servers and is a workaround''
 
 Check that you are on generic:
 
