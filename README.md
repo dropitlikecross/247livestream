@@ -1,3 +1,4 @@
+
 # 247livestream
 24/7 Live Stream Project
 
@@ -10,6 +11,8 @@ These instructions are for me as a personal reference. Feel free to use it as a 
 I used Ubuntu 18.04 to test and run everything.
 
 At the time of writing this I am running the servers on Azure using Standard B2s (2 vcpus, 4 GB memory). These were the lowest hardware settings I could run smoothly on.
+
+Check out the [installation instructions](https://github.com/dropitlikecross/247livestream/blob/master/instructions.md) and follow along.
 
 
 Chill Step Stream:
