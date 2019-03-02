@@ -61,7 +61,7 @@ Remove all versions of -azure. You may need to reboot once and remove the update
 
 Add your azure shared storage. I've left a generic name as a guide:
 
-    //.file.core.windows.net/streamingstorage              /mnt/streamstorage            cifs credentials=/home/storagelogin.credentials,noauto,nofail,x-systemd.automount,x-systemd.device-timeout=90 0       0
+//myaccountname.file.core.windows.net/mystorageshare /mnt/mymountpoint cifs vers=3.0,credentials=/home/storagelogin.credentials,dir_mode=0777,file_mode=0777
 
 Create the credentials file and fill it in with your login details. You can place the credetials in fstab if you prefer.
 
