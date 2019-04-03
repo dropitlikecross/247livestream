@@ -90,7 +90,7 @@ Use "mpc ls | mpc add" to add all files to the playlist.
 
 I recommend the following settings for MPC:
 
-    mpc repeat on | mpc shuffle | mpc play
+    mpc repeat on | mpc shuffle | mpc crossfade 5 | mpc play
 
 More on MPC:
 http://manpages.ubuntu.com/manpages/trusty/man1/mpc.1.html
