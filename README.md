@@ -23,4 +23,4 @@ Gaming Music Stream:
 https://youtu.be/DPyhQv80nQs
 
 
-![picture](https://lensdump.com/i/WC6nEH)
+![picture](https://i.lensdump.com/i/WC6nEH.jpg)
