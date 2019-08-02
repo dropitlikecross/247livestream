@@ -16,7 +16,7 @@ sudo nano storagelogin.credentials
 
 # Set up Cron Scripts
 
-Place the sh scripts inside /etc/cron.daily
+Place the sh scripts inside /etc/cron.daily replace the mount location and url with your own.
 
     youtube-dl -i --download-archive "/mnt/streamstorage/music/gamingstream/archive.txt" -o "/mnt/streamstorage/music/gamingstream/songs/%(title)s.%(ext)s" -f bestaudio --audio-format mp3 "https://www.youtube.com/user/NoCopyrightSounds/videos" --reject-title "podcast" --reject-title "cinematic" --reject-title "mix" --geo-bypass --yes-playlist --playlist-start 1 --add-metadata -x "%(artist)s - %(title)s"
     
