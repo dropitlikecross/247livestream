@@ -22,7 +22,7 @@ KEYINT=$(expr $FPS \* 2)
 $FFMPEG -thread_queue_size 8024 -f alsa -ac 2 -i hw:Loopback,1,0 -fflags +genpts -r $FPS -stream_loop -1 -i $VID \
 -vf drawtext="fontfile=/usr/share/fonts/truetype/slant.ttf:bordercolor=$BCOLOR: borderw=1: fontcolor=$COLOR:textfile=$TEXT:reload=1:y=10:x=5:fontsize=38" \
 -vcodec libx264 -x264opts keyint=$KEYINT:min-keyint=$KEYINT:scenecut=-1 -b:v $CBR -minrate $CBR -pix_fmt yuv420p \
--s $OUTRES -preset $QUALITY -c:a libfdk_aac -b:a 96k -ar 44100 -threads $THREADS -fflags nobuffer \
+-s $OUTRES -preset $QUALITY -c:a aac -b:a 96k -ar 44100 -threads $THREADS -fflags nobuffer \
 -bufsize $CBR -f flv "rtmp://live.restream.io/live/$STREAM_KEY" \
 
 2> log_stream.txt
