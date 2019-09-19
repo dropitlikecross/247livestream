@@ -9,15 +9,13 @@ sudo add-apt-repository ppa:jonathonf/ffmpeg-4
 
 sudo apt-get update
 
-sudo apt-get -y install ffmpeg
+apt-get -y install ffmpeg
 
 apt-get -y install libomxil-bellagio-dev
 
 apt-get -y install libfdk-aac-dev
 
 apt-get -y install yasm
-
-apt-get -y install ffmpeg
 
 ffmpeg -version
 
