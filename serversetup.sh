@@ -18,7 +18,9 @@ sudo apt-get update -qq && sudo apt-get -y install \
   texinfo \
   wget \
   zlib1g-dev \
-
+  pkg-config \
+  
+sudo apt-get install libx264-dev libx265-dev libnuma-dev install libvpx-dev libfdk-aac-dev libmp3lame-dev libopus-dev
 
 apt-get -y install librtmp-dev libssl-dev libx264-dev libasound2-dev
 
