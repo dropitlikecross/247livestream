@@ -20,7 +20,7 @@ sudo apt-get update -qq && sudo apt-get -y install \
   zlib1g-dev \
   pkg-config \
   
-sudo apt-get install libx264-dev libx265-dev libnuma-dev install libvpx-dev libfdk-aac-dev libmp3lame-dev libopus-dev  
+sudo apt-get install libx264-dev libx265-dev libnuma-dev install libvpx-dev libfdk-aac-dev libmp3lame-dev libopus-dev libasound2-dev
 
 apt-get -y install librtmp-dev libssl-dev libasound2-dev
 
