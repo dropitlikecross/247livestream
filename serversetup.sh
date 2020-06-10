@@ -9,32 +9,25 @@ sudo apt-get update -qq && sudo apt-get -y install \
   build-essential \
   cmake \
   git-core \
-  libass-dev \
+  nasm \
   libfreetype6-dev \
-  libtool \
   libvorbis-dev \
   libxcb1-dev \
-  pkg-config \
-  texinfo \
-  wget \
-  zlib1g-dev \
-  pkg-config \
-  
-sudo apt-get install libx264-dev libx265-dev libnuma-dev install libvpx-dev libfdk-aac-dev libmp3lame-dev libopus-dev libasound2-dev
+  libx264-dev \
+  libx265-dev \
+  libnuma-dev \
+  libvpx-dev \
+  libfdk-aac-dev \
+  libmp3lame-dev \
+  libopus-dev \
+  gnutls-bin \
+  libasound2-dev \
+  librtmp-dev \
+  libssl-dev \
+  libomxil-bellagio-dev \
+  libunistring-dev 
 
-apt-get -y install librtmp-dev libssl-dev libasound2-dev
 
-sudo add-apt-repository ppa:jonathonf/ffmpeg-4
-
-sudo apt-get update
-
-apt-get -y install ffmpeg
-
-apt-get -y install libomxil-bellagio-dev
-
-apt-get -y install libfdk-aac-dev
-
-apt-get -y install yasm
 
 ffmpeg -version
 
