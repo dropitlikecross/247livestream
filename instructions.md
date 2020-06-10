@@ -1,16 +1,3 @@
-
-
-
-
-# 247livestream
-24/7 Live Stream Project
-
-
-Run serversetup.sh to install all requirements and system environments.
-
-    sudo sh serversetup.sh
-
-
 # ALSA - skip this step if you are not using azure
 This is the sound system used by linux. I wasn't able to get it working on the Azure Kernel so we will have to change to the Generic Kernel.
 *Note: This is only applies to Azure hosted servers and is a workaround*
@@ -53,7 +40,13 @@ Alternatively you can remove the azure kernels:
 
 Remove all versions of -azure. You may need to reboot once and remove the updated version.
 
+# 247livestream
+24/7 Live Stream Project
 
+
+Run serversetup.sh to install all requirements and system environments.
+
+    sudo sh serversetup.sh
 
 # Add a network share
 
