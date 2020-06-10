@@ -25,7 +25,9 @@ sudo apt-get update -qq && sudo apt-get -y install \
   librtmp-dev \
   libssl-dev \
   libomxil-bellagio-dev \
-  libunistring-dev 
+  libunistring-dev \
+  libass-dev \
+  libfdk-aac-dev
   
 cd ~/ffmpeg_sources && \
 git -C aom pull 2> /dev/null || git clone --depth 1 https://aomedia.googlesource.com/aom && \
