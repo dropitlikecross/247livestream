@@ -1,7 +1,9 @@
 #Installs all the requirements for Ubuntu 18.04
+apt-get -y install linux-generic
 
-apt-get update
-apt-get -y install screen nano bzip2 mpc mpd htop git
+sudo apt-get update -qq && sudo apt-get
+
+sudo apt-get update -qq && sudo apt-get -y install mpc mpd git
 
 sudo apt-get update -qq && sudo apt-get -y install \
   autoconf \
@@ -69,7 +71,6 @@ hash -r
 
 
 
-apt-get -y install linux-generic
 
 echo 'pcm.!default { type plug slave.pcm "hw:Loopback,0,0" }' >> ~/.asoundrc
 
