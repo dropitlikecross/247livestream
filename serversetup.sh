@@ -40,7 +40,7 @@ PATH="$HOME/bin:$PATH" make && \
 make install
 
 
-
+mkdir -p ~/ffmpeg_sources ~/bin
 cd ~/ffmpeg_sources && \
 wget -O ffmpeg-snapshot.tar.bz2 https://ffmpeg.org/releases/ffmpeg-snapshot.tar.bz2 && \
 tar xjvf ffmpeg-snapshot.tar.bz2 && \
@@ -78,4 +78,4 @@ echo 'pcm.!default { type plug slave.pcm "hw:Loopback,0,0" }' >> ~/.asoundrc
 
 ldconfig
 
-
+source ~/.profile
