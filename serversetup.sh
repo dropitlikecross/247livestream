@@ -69,7 +69,9 @@ PATH="$HOME/bin:$PATH" make && \
 make install && \
 hash -r
 
+sudo apt-get -y install python3-pip
 
+pip3 install Flask
 
 
 echo 'pcm.!default { type plug slave.pcm "hw:Loopback,0,0" }' >> ~/.asoundrc
