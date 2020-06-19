@@ -30,7 +30,8 @@ sudo apt-get update -qq && sudo apt-get -y install \
   libunistring-dev \
   libass-dev \
   libfdk-aac-dev
-  
+
+mkdir -p ~/ffmpeg_sources
 cd ~/ffmpeg_sources && \
 git -C aom pull 2> /dev/null || git clone --depth 1 https://aomedia.googlesource.com/aom && \
 mkdir -p aom_build && \
