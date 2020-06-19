@@ -9,7 +9,7 @@ I noticed that you're on Ubuntu 18.04 LTS, so these instructions will do:
 
 **Install baseline dependencies first:**
 
-`sudo apt-get -y install autoconf automake build-essential libass-dev libtool pkg-config texinfo zlib1g-dev libva-dev cmake mercurial libdrm-dev libvorbis-dev libogg-dev git libx11-dev libperl-dev libpciaccess-dev libpciaccess0 xorg-dev intel-gpu-tools libwayland-dev xutils-dev libssl-dev`
+`sudo apt-get -y install autoconf automake build-essential libass-dev libtool pkg-config texinfo zlib1g-dev libva-dev cmake mercurial libdrm-dev libvorbis-dev libogg-dev git libx11-dev libperl-dev libpciaccess-dev libpciaccess0 xorg-dev intel-gpu-tools libwayland-dev xutils-dev libsdl2-dev libssl-dev`
 
 Then add the Oibaf PPA, needed to install the latest development headers for libva:
 
