@@ -2,43 +2,18 @@
 This is the sound system used by linux. I wasn't able to get it working on the Azure Kernel so we will have to change to the Generic Kernel.
 *Note: This is only applies to Azure hosted servers and is a workaround*
 
-Check that you are on generic:
-
-    cat /boot/grub/grub.cfg
-
-If you are, confirm by:
-
-    sudo modprobe snd-aloop pcm_substreams=1
-
-
-In order to do that we need to change linux kernel to generic so modprobe snd-aloop works.
-
-    sudo nano /etc/default/grub 
-
-and set
-
-    GRUB_DEFAULT=“1>2”
-then
-
-    sudo update-grub
-
-And then reboot now to take this in effect. After rebooting you can test it with 
-
-    uname -a
-
- 
-
-You should see the generic kernel. Then run:
-
-    sudo modprobe snd-aloop pcm_substreams=1
-
-Alternatively you can remove the azure kernels:
+Remove the azure kernels:
 
     ls /lib/modules
 
-    sudo apt-get autoremove --purge *1020-azure
+    sudo apt-get autoremove --purge *1029-azure
 
 Remove all versions of -azure. You may need to reboot once and remove the updated version.
+
+After rebooting, run:
+
+    sudo modprobe snd-aloop pcm_substreams=1
+
 
 # 247livestream
 24/7 Live Stream Project
