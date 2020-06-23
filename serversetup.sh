@@ -30,6 +30,19 @@ sudo apt-get update -qq && sudo apt-get -y install \
   libunistring-dev \
   libass-dev \
   libfdk-aac-dev
+  
+  sudo apt install ubuntu-restricted-addons
+  
+  sudo apt-get install libva-dev libmfx-dev
+  
+  sudo apt-get -y install autoconf automake build-essential libass-dev libtool pkg-config texinfo zlib1g-dev libva-dev cmake mercurial libdrm-dev libvorbis-dev libogg-dev git libx11-dev libperl-dev libpciaccess-dev libpciaccess0 xorg-dev intel-gpu-tools opencl-headers ocl-icd-*
+
+
+Then add the Oibaf PPA, needed to install the latest development headers for libva:
+
+sudo add-apt-repository ppa:oibaf/graphics-drivers
+sudo apt-get update && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade
+
 
 mkdir -p ~/ffmpeg_sources
 cd ~/ffmpeg_sources && \
