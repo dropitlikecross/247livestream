@@ -55,7 +55,7 @@ PATH="$HOME/bin:$PATH" PKG_CONFIG_PATH="$HOME/ffmpeg_build/lib/pkgconfig" ./conf
   --bindir="$HOME/bin" \
   --enable-gpl \
   --enable-gnutls \
-  --enable-libaom \
+  --disable-libaom \
   --enable-libass \
   --enable-libfdk-aac \
   --enable-libfreetype \
@@ -65,6 +65,9 @@ PATH="$HOME/bin:$PATH" PKG_CONFIG_PATH="$HOME/ffmpeg_build/lib/pkgconfig" ./conf
   --enable-libvpx \
   --enable-libx264 \
   --enable-libx265 \
+  --enable-libmfx \
+  --enable-libdrm \
+  --enable-gpl \
   --enable-nonfree && \
 PATH="$HOME/bin:$PATH" make && \
 make install && \
